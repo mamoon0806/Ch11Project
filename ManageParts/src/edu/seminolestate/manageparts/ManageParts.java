@@ -9,8 +9,8 @@ public class ManageParts {
 	public static void displayMain() {
 		System.out.println("1. Create Purchased Part\n" + 
 				"2. Create Manufactured Part\n" + 
-				"3. parts a part\n" + 
-				"4. parts all parts\n" + 
+				"3. List a part\n" + 
+				"4. List all parts\n" + 
 				"5. Exit");
 	}
 	public static void main(String[] args) {
@@ -57,6 +57,7 @@ public class ManageParts {
 				}
 				System.out.println("Enter the Description");
 				String description = sc.nextLine(); 
+				description = sc.nextLine(); 
 				System.out.println("Enter the Sell Price");
 				double sellPrice = sc.nextDouble(); 
 				System.out.println("Enter the Labor cost");
@@ -74,14 +75,14 @@ public class ManageParts {
 				if(parts.size() == 0) {
 					System.out.println("Parts list is empty");
 				}
-				else {
+				else {	
 					for(int i = 0; i < parts.size(); i++) {
 						if(i == parts.size() - 1 && parts.get(i).getPartID() != id) {
 							System.out.println("Part not found");
 						}
 						if(parts.get(i).getPartID() == id) {
 							System.out.println(parts.get(i).toString());
-							System.out.println(NumberFormat.getCurrencyInstance(new Locale("en", "US"))
+							System.out.println("Total Cost: " + NumberFormat.getCurrencyInstance(new Locale("en", "US"))
 							        .format(parts.get(i).getTotalCost()));
 							
 						}
@@ -96,10 +97,14 @@ public class ManageParts {
 				}
 				for(Part part : parts) {
 					System.out.println(part.toString());
-					System.out.println(NumberFormat.getCurrencyInstance(new Locale("en", "US"))
+					System.out.println("Total Cost: " + NumberFormat.getCurrencyInstance(new Locale("en", "US"))
 					        .format(part.getTotalCost()));
 				}
 				displayMain();
+			}
+			if(input == 5) {
+				System.out.println("Thanks for using parts manager!");
+				System.exit(0);
 			}
 		}
 	}

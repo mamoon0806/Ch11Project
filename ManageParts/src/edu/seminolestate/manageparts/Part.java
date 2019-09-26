@@ -19,7 +19,7 @@ public class Part {
 	
 	@Override
 	public String toString() {	
-		return this.getClass() + "ID: " + partID + "Part Desc: " + partDescription + "Part Sell Price: " + partSellPrice;
+		return this.getClass() + " ID: " + partID + " Part Desc: " + partDescription + " Part Sell Price: " + partSellPrice;
 	}
 	
 	public int getPartID() {

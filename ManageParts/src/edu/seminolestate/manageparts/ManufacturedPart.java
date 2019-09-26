@@ -44,6 +44,7 @@ public class ManufacturedPart extends Part{
 		}
 	}
 	
+	@Override
 	public double getTotalCost() {
 		return super.getTotalCost() + laborCost + materialCost;
 	}
