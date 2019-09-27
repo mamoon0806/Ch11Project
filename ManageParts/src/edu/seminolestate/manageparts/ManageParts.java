@@ -82,8 +82,7 @@ public class ManageParts {
 						}
 						if(parts.get(i).getPartID() == id) {
 							System.out.println(parts.get(i).toString());
-							System.out.println("Total Cost: " + NumberFormat.getCurrencyInstance(new Locale("en", "US"))
-							        .format(parts.get(i).getTotalCost()));
+							System.out.println("Total Cost: " + parts.get(i).getTotalCost());
 							
 						}
 					}
@@ -97,8 +96,7 @@ public class ManageParts {
 				}
 				for(Part part : parts) {
 					System.out.println(part.toString());
-					System.out.println("Total Cost: " + NumberFormat.getCurrencyInstance(new Locale("en", "US"))
-					        .format(part.getTotalCost()));
+					System.out.println("Total Cost: " + part.getTotalCost());
 				}
 				displayMain();
 			}
