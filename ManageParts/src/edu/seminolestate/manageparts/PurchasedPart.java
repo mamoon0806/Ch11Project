@@ -20,7 +20,9 @@ public class PurchasedPart extends Part{
 	
 	public PurchasedPart(int newID, String newDesc, double newSellPrice, 
 			double newHandlingCost, double newPurchPrice, String newVendor) {
-		super(newID, newDesc, newSellPrice);	
+		super(newID, newDesc, newSellPrice);
+		setPurchasePrice(newPurchPrice);
+		setHandlingCost(newHandlingCost);
 	}
 	
 	@Override

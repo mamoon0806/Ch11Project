@@ -104,6 +104,9 @@ public class ManageParts {
 				System.out.println("Thanks for using parts manager!");
 				System.exit(0);
 			}
+			else {
+				displayMain();
+			}
 		}
 	}
 }
